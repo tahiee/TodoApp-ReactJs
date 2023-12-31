@@ -16,7 +16,10 @@ function App() {
       updatedTodos[editIndex] = text;
       setTodo(updatedTodos);
       setEditIndex(null);
-    } else {
+    }else if(text === ''){
+      alert('write some thing')
+    }
+    else {
       // Otherwise, add a new todo
       setTodo([...todo, text]);
     }
